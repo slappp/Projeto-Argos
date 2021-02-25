@@ -1,0 +1,56 @@
+version: "3.7"
+services:
+    checkinportaria:
+      image: jcsgg/checkinportaria-image:0.1
+      container_name: checkinportaria-container
+      restart: always
+      network_mode: host
+      environment:
+        - DISPLAY=:0
+      volumes: 
+        - "$home/ .Xauthority:/root/ .Xauthority:rw"
+    entradacarros:
+      image: jcsgg/entradacarros-image:0.1
+      container_name: entradacarros-container
+      restart: always
+      network_mode: host
+      environment:
+        - DISPLAY=:0
+      volumes: 
+        - "$home/ .Xauthority:/root/ .Xauthority:rw"
+    entradacaminhao:
+      image: jcsgg/entradacaminhao-image:0.1
+      container_name: entradacaminhao-container
+      restart: always
+      network_mode: host
+      environment:
+        - DISPLAY=:0
+      volumes: 
+        - "$home/ .Xauthority:/root/ .Xauthority:rw"
+    entradacolaborador:
+      image: jcsgg/entradacolaborador-image:0.1
+      container_name: entradacolaborador-container
+      restart: always
+      network_mode: host
+      environment:
+        - DISPLAY=:0
+      volumes: 
+        - "$home/ .Xauthority:/root/ .Xauthority:rw"
+    saidacarros:
+      image: jcsgg/saidacarros-image:0.1
+      container_name: saidacarros-container
+      restart: always
+      network_mode: host
+      environment:
+        - DISPLAY=:0
+      volumes: 
+        - "$home/ .Xauthority:/root/ .Xauthority:rw"
+    saidacaminhao:
+      image: jcsgg/saidacaminhao-image:0.1
+      container_name: saidacaminhao-container
+      restart: always
+      network_mode: host
+      environment:
+        - DISPLAY=:0
+      volumes: 
+        - "$home/ .Xauthority:/root/ .Xauthority:rw"
